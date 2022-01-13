@@ -23,38 +23,69 @@ $maxWidthContainer: 1170;
         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
 }
+
 body {
     background: url(../img/BG.png) no-repeat top;
     font-family: "Source Sans Pro", sans-serif;
 }
 .header {
-    @include adaptive("margin-right", 100, 50, 1);
-    @include adaptive("margin-left", 100, 50, 1);
+    @include adaptive("margin-right", 100, 20, 1);
+    @include adaptive("margin-left", 100, 20, 1);
     @include adaptive("margin-top", 20, 5, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100vw;
+    max-width: 100%;
     &__logo {
-        @include adaptive("font-size", 30, 10, 1);
+        @include adaptive("font-size", 30, 8, 1);
         font-style: normal;
         font-weight: 900;
         line-height: 29px;
         text-transform: uppercase;
         color: #17252a;
     }
+    &__m-menu {
+        display: none;
+        @media (max-width: 992px) {
+            display: block;
+            background-color: transparent;
+            border: none;
+            width: 50px;
+            height: 50px;
+            margin-left: 45%;
+            cursor: pointer;
+        }
+    }
     &__menu {
+        @include adaptive("font-size", 16, 11, 1);
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-family: "Sintony", sans-serif;
         font-weight: normal;
-        @include adaptive("font-size", 20, 10, 1);
         line-height: 24px;
         color: #feffff;
+        @media (max-width: 992px) {
+            position: absolute;
+            right: 8%;
+            top: 8%;
+            padding: 15px;
+            margin-left: 20px;
+            flex-direction: column;
+            background-color: #feffff;
+            color: #17252a;
+            border-radius: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20%);
+            transition: opacity 0.5s, transform 0.5s;
+        }
     }
     &__menu-item:not(:last-child) {
-        @include adaptive("padding-right", 53, 10, 1);
+        @include adaptive("padding-right", 43, 8, 1);
+        @media (max-width: 992px) {
+            padding: 0;
+        }
     }
     &__assebility {
         @include adaptive("width", 100, 40, 1);
@@ -71,15 +102,15 @@ body {
 }
 .main {
     @include adaptive("max-width", 1108, 300, 1);
-    @include adaptive("margin-left", 165, 10, 1);
-    @include adaptive("margin-right", 165, 10, 1);
+    @include adaptive("margin-left", 165, 20, 1);
+    @include adaptive("margin-right", 165, 20, 1);
     font-family: "Source Sans Pro", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     &__title {
-        @include adaptive("font-size", 58, 28, 1);
+        @include adaptive("font-size", 58, 20, 1);
         @include adaptive("margin-top", 100, 30, 1);
         @include adaptive("margin-bottom", 100, 30, 1);
         font-weight: 900;
@@ -97,7 +128,7 @@ body {
         border-radius: 20px;
         border: none;
         font-weight: bold;
-        @include adaptive("font-size", 20, 14, 1);
+        @include adaptive("font-size", 20, 11, 1);
         line-height: 24px;
         text-align: center;
         letter-spacing: 4.2px;
@@ -106,8 +137,9 @@ body {
     }
     &__cards {
         @include adaptive("margin-top", 96, 50, 1);
-        @include adaptive("margin-left", 163, 100, 1);
-        @include adaptive("margin-right", 163, 100, 1);
+        @include adaptive("margin-left", 163, 60, 1);
+        @include adaptive("margin-right", 163, 60, 1);
+        max-width: 94vw;
         display: flex;
         justify-content: space-between;
     }
@@ -115,9 +147,9 @@ body {
         @include adaptive("margin-right", 27, 10, 1);
     }
     &__card {
-        @include adaptive("width", 353, 70, 1);
-        @include adaptive("height", 390, 107, 1);
-        @include adaptive("padding-top", 53, 17, 1);
+        @include adaptive("width", 400, 55, 1);
+        @include adaptive("height", 390, 190, 1);
+        @include adaptive("padding", 50, 15, 0);
 
         background-color: #feffff;
         box-shadow: (4px 4px 12px rgba(0, 0, 0, 0.5));
@@ -146,8 +178,8 @@ body {
     }
     &__info {
         @include adaptive("width", 1114, 280, 1);
-        @include adaptive("height", 329, 100, 1);
-        @include adaptive("margin-top", 114, 30, 1);
+        @include adaptive("height", 329, 200, 1);
+        @include adaptive("margin-top", 114, 60, 1);
         background: url(../img/BG-info.png) no-repeat;
         border-radius: 15px;
         display: flex;
@@ -156,8 +188,8 @@ body {
         align-items: center;
     }
     &__info-title {
-        @include adaptive("padding-top", 40, 20, 1);
-        @include adaptive("font-size", 28, 20, 1);
+        @include adaptive("padding-top", 40, 7, 0);
+        @include adaptive("font-size", 28, 14, 1);
         font-weight: 900;
         line-height: 36px;
         text-align: center;
@@ -165,8 +197,8 @@ body {
         color: #feffff;
     }
     &__info-subtitle {
-        @include adaptive("font-size", 18, 12, 1);
-        @include adaptive("width", 441, 201, 1);
+        @include adaptive("font-size", 18, 10, 1);
+        @include adaptive("width", 441, 300, 1);
         font-family: "Sintony", sans-serif;
         font-weight: normal;
         line-height: 27px;
@@ -177,7 +209,7 @@ body {
         @include adaptive("width", 254, 112, 1);
         @include adaptive("height", 52, 31, 1);
         @include adaptive("margin-bottom", 40, 20, 1);
-        @include adaptive("font-size", 15, 10, 1);
+        @include adaptive("font-size", 15, 8, 0);
         font-family: "Source Sans Pro", sans-serif;
         background-color: #def2f1;
         border-radius: 20px;
@@ -222,4 +254,12 @@ body {
     &__telephone {
         @include adaptive("margin-right", 93, 13, 1);
     }
+}
+.hidden {
+    display: none;
+}
+.is-open {
+    opacity: 70%;
+    visibility: visible;
+    transform: translateY(0);
 }
