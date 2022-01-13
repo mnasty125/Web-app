@@ -201,7 +201,7 @@ body {
         @include adaptive("width", 441, 300, 1);
         font-family: "Sintony", sans-serif;
         font-weight: normal;
-        line-height: 27px;
+        line-height: 24px;
         text-align: center;
         color: #feffff;
     }
@@ -240,12 +240,6 @@ body {
         font-family: "Sintony", sans-serif;
         line-height: 27px;
         color: #17252a;
-    }
-    &__contact {
-        display: flex;
-    }
-    &__contact:not(:last-child) {
-        @include adaptive("margin-right", 93, 13, 1);
     }
     &__email {
         @include adaptive("margin-right", 93, 13, 1);

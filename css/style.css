@@ -463,7 +463,7 @@ body {
   width: 441px;
   font-family: "Sintony", sans-serif;
   font-weight: normal;
-  line-height: 27px;
+  line-height: 24px;
   text-align: center;
   color: #feffff;
 }
@@ -579,22 +579,6 @@ body {
 @media (max-width: 1170px) {
   .footer__contacts {
     font-size: calc(8px + 10 * ((100vw - 320px) / 850));
-  }
-}
-
-.footer__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer__contact:not(:last-child) {
-  margin-right: 93px;
-}
-
-@media (max-width: 1170px) {
-  .footer__contact:not(:last-child) {
-    margin-right: calc(13px + 80 * ((100vw - 320px) / 850));
   }
 }
 
