@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="./scss/style.scss" />
     <title>UX_app</title>
   </head>
-  <body>
+  <body id="main-page">
+    <div class="check-theme">
+      <input type="radio" name="theme" id="themeChoice1" value="light" class="theme-btn" checked>
+      <label for="themeChoice1" class="check-theme__label" id="themeChoice1-label">Светлая тема</label>
+      <input type="radio" name="theme" id="themeChoice2" value="dark" class="theme-btn" >
+      <label for="themeChoice2" class="check-theme__label" id="themeChoice2-label">Темная тема</label>
+      <input type="radio" name="theme" id="themeChoice3" value="contrast" class="theme-btn">
+      <label for="themeChoice3" class="check-theme__label" id="themeChoice3-label">Высокая контрастность</label>
+    </div>
     <header class="header">
-      <div class="header__logo">Веб-доступность</div>
+      <div class="header__logo"><a href="./index.html" class="link">Веб-доступность</a></div>
       <button class="header__m-menu" alt="icon mobile-menu"><svg width="50" height="50" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line y1="0.5" x2="10" y2="0.5" stroke="white"/>
         <line y1="3.5" x2="10" y2="3.5" stroke="white"/>
@@ -19,19 +27,20 @@
         </svg>
         </button>
       <div class="header__menu">
-        <div class="header__menu-item">Выбор чек-листов</div>
-        <div class="header__menu-item">Методология экспертизы</div>
-        <div class="header__menu-item">Полезные ресурсы</div>        
+        <div class="header__menu-item"><a class="link" href="./chek-page.html">Выбор чек-листов</a></div>
+        <div class="header__menu-item"><a href="#" class="link">Методология экспертизы</a></div>
+        <div class="header__menu-item"><a href="#" class="link">Полезные ресурсы</a></div>        
       </div>
-      <button class="header__assebility">
-        <img class="header__assebility-img" src="./img/assebility.svg" alt="logo: web-assebility"></img>
-      </button>
+        <button class="header__accessibility">
+          <img class="header__accessibility-img" src="./img/logo-ws.png" alt="логотип веб-доступности"></img>
+        </button>
+ 
     </header>
     <main class="main">
-      <div class="main__title">Экспертиза <strong class="main__colorize">веб-доступности</strong>
+      <div class="main__title">Экспертиза <strong class="colorize">веб-доступности</strong>
         электронных образовательных
         ресурсов</div>
-      <button class="main__button">Выбрать чек-лист</button>      
+      <button class="main__button" onclick="document.location='chek-page.html'">Выбрать чек-лист</button>      
       <div class="main__cards">
         <div class="main__card">
           <img class="main__card-img" src="./img/icon1.png" alt="icon card 1">
@@ -52,7 +61,7 @@
       <div class="main__info">
         <div class="main__info-title">Lorem, ipsum dolor.</div>
         <div class="main__info-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsa praesentium nesciunt officiis, doloremque quisquam? Dolore laborum veritatis sunt dolorum.</div>
-        <button class="main__info-button">Lorem</button>       
+        <button class="main__info-button" onclick="document.location='#'">Lorem</button>       
       </div>   
     </main>  
     <footer class="footer">
