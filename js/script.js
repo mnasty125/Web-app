@@ -1,27 +1,19 @@
-const menu = document.querySelector(".header__menu");
-const menuButton = document.querySelector(".header__m-menu");
-const page = document.querySelector("html");
-const theme = document.querySelectorAll(".theme-btn");
-const checkLightTheme = document.getElementById("themeChoice1");
-const checkDarkTheme = document.getElementById("themeChoice2");
-const checkContrastTheme = document.getElementById("themeChoice3");
-
-page.classList.remove("light-theme" || "dark-theme" || "contrast-theme");
-
-if (checkLightTheme.checked) {
-  page.classList.add("light-theme");
-} else if (checkDarkTheme.checked) {
-  page.classList.add("dark-theme");
-} else if (checkContrastTheme.checked) {
-  page.classList.add("contrast-theme");
-}
-
-theme.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    location.reload();
-  });
+// Модальное окно на главной странице
+$(".popup-fade__popup-close").click( () => {
+  $(".popup-fade").addClass("hidden");
 });
 
-menuButton.addEventListener("click", () => {
-  menu.classList.toggle("is-open");
+$(".main__button-new").click( () => {
+  $(".popup-fade").removeClass("hidden");
+});
+
+$(window).keydown((event) => {
+  if (event.key == "Escape"){
+    $(".popup-fade").addClass("hidden");
+  }
+});
+
+// Окно справки
+$("#btn-info").click( () => {
+  $(".check-main__info-page").toggleClass("hidden");
 });

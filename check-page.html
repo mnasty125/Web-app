@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <script src= "js/jquery-3.6.0.min.js"></script>
+    <title>UX_app</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header" id="check-header">
+      <div class="header__logo"><a href="./index.html" class="link">Цифровая доступность</a></div>
+        <button class="header__accessibility">
+          <img class="header__accessibility-img" src="./img/logo-ws.png" alt="логотип цифровой доступности"></img>
+        </button>
+    </header>
+    <!-- /header -->
+    <!-- main -->
+    <main class="check-main">
+        <div class="check-main__buttons">
+            <button class="check-main__back-btn"><img src="./img/Back.png" class="btn-back-img" alt="кнопка назад"></button>
+            <button id="btn-new"><div class="check-main__btn"><img src="./img/Btn-new.png" class="btn-img" alt="начать проверку"><p>Начать проверку</p></div></button>
+            <button id="btn-open"><div class="check-main__btn"><img src="./img/Btn-open.png" class="btn-img" alt="открыть проверку"><p>Открыть проверку</p></div></button>
+            <button id="btn-save"><div class="check-main__btn"><img src="./img/Btn-save.png" class="btn-img" alt="сохранить проверку"><p>Сохранить проверку</p></div></button>
+            <button id="btn-stat"><div class="check-main__btn"><img src="./img/Btn-stat.png" class="btn-img" alt="статистика"><p>Статистика</p></div></button>
+            <button class="check-main__btn-generation" id="btn-generation">Сгенерировать <strong class="impo">отчёт</strong> </button>
+            <button id="btn-info"><div class="check-main__info"><img src="./img/Btn-info.png" class="btn-img" alt="начать проверку"><p>Справка</p></div></button>
+        </div>
+       <div class="check-main__content">
+         <!-- Панелька чек-листов -->
+        <div class="check-main__check-lists">
+          <!-- Класс "check-list-completed" для заполненного элемента
+              Класс "check-list-active" для активного элемента -->
+          <div class="check-main__check-list check-list-active">Медиа</div>
+          <div class="check-main__check-list">Общая доступность</div>
+          <div class="check-main__check-list">Доступность основного контента</div>
+          <div class="check-main__check-list check-list-completed">Тесты</div>
+          <div class="check-main__check-list">Симуляции</div>
+          <div class="check-main__check-list">математическая нотация</div>
+          <div class="check-main__check-list">программный код</div>          
+        </div>
+        <div class="check-main__container">
+          <!-- Название чек-листа (изменяется по нажатию на карандаш) -->
+          <div class="check-main__named">
+            <input type="text" class="check-main__name-check" placeholder="Название чек-листа">
+            <img src="./img/Change-name.png" alt="Изменить название" id="check-name"></input>          
+          </div>
+          <div class="check-main__check">
+            <!-- Главная часть -->
+            <div class="check-main__section">
+              <div class="check-main__title">e-m3.Присутствует возможность регулирования громкости звука</div>
+              <div class="check-main__per"><p>Выполнение:</p><select id="per" name="per" required="required">
+                <option value="1">Выполняется</option>
+                <option value="2">Не выполняется</option>
+                <option value="3">Не применимо</option>
+              </select></div>
+              <div class="check-main__mist"><p>Источник ошибки:</p><select id="mist" name="mist" required="required">
+                <option value="1">Автор</option>
+                <option value="2">Платформа</option>
+                <option value="3">Автор и платформа</option>
+                <option value="4">Не идентифицируется</option>
+              </select></div>
+              <div class="check-main__comm">
+                 <p>Комментарий:</p>
+                 <textarea type="text" id="comm"></textarea>
+              </div>
+              <div class="check-main__wgac">
+                 <p class="check-main__title-wgac">Критерий WCAG 2.1:</p>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>  
+              <button class="check-main__button">OK</button>       
+          </div>   
+          <!-- Панель критериев -->
+          <div class="check-main__crits">
+              <!-- Класс "check-crit-completed" для заполненного элемента
+              Класс "check-crit-active" для активного элемента -->
+              <div class="check-main__check-crit check-crit-completed">e-m1</div>
+              <div class="check-main__check-crit check-crit-completed">e-m1</div>
+              <div class="check-main__check-crit check-crit-completed">e-m1</div>
+              <div class="check-main__check-crit check-crit-active">e-m1</div>
+              <div class="check-main__check-crit">e-m1</div>
+              <div class="check-main__check-crit">e-m1</div>
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+              <div class="check-main__check-crit">e-m1</div>  
+          </div>
+        </div>          
+        </div>        
+        <div class="check-main__info-page">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
+        </div>                  
+    </main>
+    <!-- /main -->
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+      <div class="footer__contacts">
+        <div class="footer__email">
+          <img src="./img/email.svg" alt="icon email">
+          Contact@cloud.com
+        </div>
+        <div class="footer__telephone">
+          <img src="./img/tel.svg" alt="icon telephone">
+          00000-000-00
+        </div>                        
+      </div>
+    </footer>  
+    <!-- /footer  -->
+  </body>
+  <script src= "js/script.js"></script>
+</html>

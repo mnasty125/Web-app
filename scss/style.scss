@@ -23,305 +23,19 @@ $maxWidthContainer: 1170;
         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
 }
-
-.light-theme {
-    #main-page {
-        background: url(../img/BG.png) no-repeat top;
-    }
-    #themeChoice1-label {
-        text-decoration: underline;
-    }
-    #check-header {
-        background: url(../img/bg-check.png) no-repeat top;
-    }
-    .header {
-        &__logo {
-            color: #17252a;
-        }
-        &__menu {
-            color: #feffff;
-            @media (max-width: 992px) {
-                background-color: #feffff;
-                color: #17252a;
-            }
-        }
-    }
-    .main {
-        &__title {
-            color: #feffff;
-        }
-        &__button {
-            background-color: #17252a;
-            color: #feffff;
-        }
-        &__card {
-            background-color: #feffff;
-            box-shadow: (4px 4px 12px rgba(0, 0, 0, 0.5));
-        }
-        &__card-title {
-            color: #17252a;
-        }
-        &__card-text {
-            color: #17252a;
-        }
-        &__info {
-            background: url(../img/BG-info.png) no-repeat;
-        }
-        &__info-title {
-            color: #feffff;
-        }
-        &__info-subtitle {
-            color: #feffff;
-        }
-        &__info-button {
-            background-color: #feffff;
-            color: #17252a;
-        }
-    }
-    .colorize {
-        color: #17252a;
-    }
-    .main-check {
-        &__title {
-            color: #2b7a78;
-        }
-        &__points-title {
-            color: #feffff;
-        }
-        &__points {
-            background-color: #2b7a78;
-        }
-        &__point {
-            background-color: #feffff;
-        }
-        &__point-label {
-            color: #17252a;
-        }
-        &__generate-btn {
-            color: #def2f1;
-            background-color: #17252a;
-        }
-    }
-    .footer {
-        &__text {
-            color: #17252a;
-        }
-        &__contacts {
-            color: #17252a;
-        }
-    }
+#main-page {
+    background: url(../img/BG.png) no-repeat top;
 }
-
-.dark-theme {
-    #main-page {
-        background: url(../img/BG.png) no-repeat top;
-    }
-    #themeChoice2-label {
-        text-decoration: underline;
-    }
-    #check-header {
-        background: url(../img/bg-check.png) no-repeat top;
-    }
-    background-color: #17252a;
-    .header {
-        &__logo {
-            color: #17252a;
-        }
-        &__menu {
-            color: #17252a;
-            @media (max-width: 1200px) {
-                background-color: #17252a;
-                color: #feffff;
-            }
-        }
-    }
-    .main {
-        &__title {
-            color: #17252a;
-        }
-        &__button {
-            background-color: #17252a;
-            color: #c7c7c7;
-        }
-        &__card {
-            background-color: #17252a;
-            box-shadow: (1px 1px 15px rgba(255, 255, 255, 0.5));
-        }
-        &__card-title {
-            color: #feffff;
-        }
-        &__card-text {
-            color: #feffff;
-        }
-        &__info {
-            background: url(../img/BG-info.png) no-repeat;
-        }
-        &__info-title {
-            color: #17252a;
-        }
-        &__info-subtitle {
-            color: #17252a;
-        }
-        &__info-button {
-            background-color: #17252a;
-            color: #feffff;
-        }
-    }
-    .colorize {
-        color: #feffff;
-    }
-    .main-check {
-        &__btn-back {
-            filter: invert(100);
-        }
-        &__title {
-            color: #feffff;
-        }
-        &__points-title {
-            color: #17252a;
-        }
-        &__points {
-            background-color: #225f5d;
-        }
-        &__point {
-            background-color: #17252a;
-        }
-        .point-info-img {
-            filter: invert(100);
-        }
-        &__point-label {
-            color: #feffff;
-        }
-        &__generate-btn {
-            color: #def2f1;
-            background-color: #17252a;
-        }
-    }
-    .footer {
-        &__text {
-            color: #feffff;
-        }
-        &__contacts {
-            color: #feffff;
-        }
-    }
+#check-header {
+    background: #5daeab;
 }
-
-.contrast-theme {
-    background-color: black;
-    .check-theme {
-        color: lime;
-    }
-    #themeChoice3-label {
-        text-decoration: underline;
-    }
-    .header {
-        background-color: black;
-        border-bottom: 1px solid white;
-        &__logo {
-            color: yellow;
-        }
-        &__menu {
-            color: orange;
-            @media (max-width: 1200px) {
-                background-color: black;
-                color: yellow;
-            }
-        }
-    }
-    .main {
-        &__title {
-            color: yellow;
-        }
-        &__button {
-            background-color: red;
-            color: white;
-        }
-        &__card {
-            background-color: black;
-            box-shadow: (1px 1px 15px rgba(255, 255, 255, 0.5));
-        }
-        &__card-title {
-            color: yellow;
-        }
-        &__card-text {
-            color: lime;
-        }
-        &__info {
-            background-color: black;
-            border: 2px solid white;
-        }
-        &__info-title {
-            color: yellow;
-        }
-        &__info-subtitle {
-            color: lime;
-        }
-        &__info-button {
-            background-color: red;
-            color: white;
-        }
-    }
-    .colorize {
-        color: lime;
-    }
-    .main-check {
-        &__btn-back {
-            filter: invert(100);
-        }
-        &__title {
-            color: red;
-        }
-        &__points-title {
-            color: lime;
-        }
-        &__point-label {
-            color: orange;
-        }
-        &__points-title {
-            color: yellow;
-        }
-        .point-info-img {
-            filter: invert(100);
-        }
-        &__points {
-            background-color: black;
-            border: 1px solid white;
-        }
-        &__point{
-            border: 1px solid white;
-        }
-        &__generate-btn {
-            color: white;
-            background-color: red;
-        }
-    }
-    .footer {
-        &__text {
-            color: yellow;
-        }
-        &__contacts {
-            color: yellow;
-        }
-    }
-}
-
 body {
     font-family: "Source Sans Pro", sans-serif;
-}
-.check-theme {
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include adaptive("font-size", 14, 10, 1);
-    &__label {
-        @include adaptive("margin-right", 12, 8, 1);
-    }
 }
 .header {
     @include adaptive("padding-right", 100, 20, 1);
     @include adaptive("padding-left", 100, 20, 1);
-    @include adaptive("padding-top", 20, 5, 1);
+    @include adaptive("padding-top", 10, 5, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -332,48 +46,7 @@ body {
         font-weight: 900;
         line-height: 29px;
         text-transform: uppercase;
-    }
-    &__m-menu {
-        display: none;
-        @media (max-width: 1200px) {
-            display: block;
-            background-color: transparent;
-            border: none;
-            width: 50px;
-            height: 50px;
-            margin-left: 45%;
-            cursor: pointer;
-            z-index: 9;
-        }
-    }
-    &__menu {
-        @include adaptive("font-size", 14, 7, 1);
-        @include adaptive("margin-left", 100, 7, 1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: "Sintony", sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-        line-height: 24px;
-        @media (max-width: 1200px) {
-            position: absolute;
-            left: 70%;
-            @include adaptive("top", 70, 55, 1);
-            padding: 15px;
-            flex-direction: column;
-            border-radius: 10px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-20%);
-            transition: opacity 0.5s, transform 0.5s;
-        }
-    }
-    &__menu-item:not(:last-child) {
-        @include adaptive("padding-right", 30, 8, 1);
-        @media (max-width: 1200px) {
-            padding: 0;
-        }
+        color: #17252a;
     }
     &__accessibility {
         @include adaptive("width", 100, 40, 1);
@@ -399,15 +72,19 @@ body {
     margin: auto;
     &__title {
         @include adaptive("font-size", 58, 20, 1);
-        @include adaptive("margin-top", 100, 30, 1);
-        @include adaptive("margin-bottom", 100, 30, 1);
+        @include adaptive("margin-top", 50, 10, 1);
         font-weight: 900;
         line-height: 56px;
         text-align: center;
+        color: #feffff;
     }
-    &__button {
-        @include adaptive("width", 400, 200, 1);
-        @include adaptive("height", 70, 50, 1);
+    .colorize {
+        color: #17252a;
+    }
+    &__button-new,
+    &__button-cont {
+        @include adaptive("width", 300, 200, 1);
+        @include adaptive("height", 100, 50, 1);
         border-radius: 20px;
         border: none;
         font-weight: bold;
@@ -416,9 +93,14 @@ body {
         text-align: center;
         letter-spacing: 4.2px;
         text-transform: uppercase;
+        background-color: #17252a;
+        color: #feffff;
+    }
+    &__button-new {
+        @include adaptive("margin-bottom", 70, 20, 1);
     }
     &__cards {
-        @include adaptive("margin-top", 96, 50, 1);
+        @include adaptive("margin-top", 80, 20, 1);
         @include adaptive("margin-left", 163, 60, 1);
         @include adaptive("margin-right", 163, 60, 1);
         max-width: 94vw;
@@ -426,168 +108,37 @@ body {
         justify-content: space-between;
     }
     &__card:not(:last-child) {
-        @include adaptive("margin-right", 27, 10, 1);
+        @include adaptive("margin-right", 50, 10, 1);
     }
     &__card {
         @include adaptive("width", 400, 55, 1);
         @include adaptive("height", 390, 190, 1);
         @include adaptive("padding", 50, 15, 0);
-        border-radius: 20px;
+        border-radius: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    &__card-img {
-        @include adaptive("width", 80, 40, 1);
-        @include adaptive("height", 80, 40, 1);
-    }
-    &__card-title {
-        @include adaptive("font-size", 18, 12, 1);
-        @include adaptive("padding-top", 32, 15, 1);
-        font-weight: 900;
-        line-height: 27px;
-        text-align: center;
+        background-color: #feffff;
+        box-shadow: (4px 4px 12px rgba(0, 0, 0, 0.5));
     }
     &__card-text {
         @include adaptive("font-size", 18, 12, 1);
         @include adaptive("padding-top", 47, 20, 1);
+        @include adaptive("padding-bottom", 27, 9, 1);
+        @include adaptive("padding-right", 30, 10, 1);
+        @include adaptive("padding-left", 30, 10, 1);
         text-align: center;
-    }
-    &__info {
-        @include adaptive("width", 1114, 280, 1);
-        @include adaptive("height", 329, 200, 1);
-        @include adaptive("margin-top", 114, 60, 1);
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__info-title {
-        @include adaptive("padding-top", 40, 7, 0);
-        @include adaptive("font-size", 28, 14, 1);
-        font-weight: 900;
-        line-height: 36px;
-        text-align: center;
-        letter-spacing: -0.1px;
-    }
-    &__info-subtitle {
-        @include adaptive("font-size", 18, 10, 1);
-        @include adaptive("width", 441, 300, 1);
         font-family: "Sintony", sans-serif;
-        font-weight: normal;
-        line-height: 24px;
-        text-align: center;
+        color: #17252a;
     }
-    &__info-button {
-        @include adaptive("width", 254, 112, 1);
-        @include adaptive("height", 52, 31, 1);
-        @include adaptive("margin-bottom", 40, 20, 1);
-        @include adaptive("font-size", 15, 8, 0);
-        font-family: "Source Sans Pro", sans-serif;
+    &__card-name {
+        @include adaptive("padding", 100, 50, 1);
+        @include adaptive("margin-top", 35, 10, 1);
+        @include adaptive("font-size", 18, 12, 1);
         border-radius: 20px;
-        border: none;
-        font-weight: bold;
-        line-height: 24px;
-        text-align: center;
-        letter-spacing: 4.2px;
-        text-transform: uppercase;
-    }
-}
-.main-check {
-    &__back-panel {
-        @include adaptive("max-width", 1114, 500, 1);
-        @include adaptive("padding-top", 30, 10, 1);
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    &__back-container {
-        display: flex;
-        align-items: center;
-    }
-    &__btn-back {
-        @include adaptive("width", 60, 20, 1);
-        @include adaptive("height", 60, 20, 1);
-        background: none;
-        border: none;
-    }
-    .button-back {
-        @include adaptive("width", 60, 20, 1);
-        @include adaptive("height", 60, 20, 1);
-    }
-    &__title {
-        @include adaptive("font-size", 26, 8, 1);
-        @include adaptive("margin-left", 66, 30, 1);
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    &__points {
-        @include adaptive("max-width", 1114, 500, 1);
-        @include adaptive("margin-top", 30, 10, 1);
-        @include adaptive("border-radius", 50, 30, 1);
-        margin-left: 5px;
-        margin-right: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    &__points-title {
-        @include adaptive("font-size", 32, 10, 1);
-        @include adaptive("width", 755, 300, 1);
-        @include adaptive("margin-top", 40, 10, 1);
-        @include adaptive("margin-bottom", 20, 5, 1);
-        @include adaptive ("line-height", 56, 20, 1);
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: 900;
-        text-align: center;
-    }
-    &__point {
-        @include adaptive("width", 755, 300, 1);
-        @include adaptive("height", 50, 20, 1);
-        @include adaptive("padding-top", 7, 3, 1);
-        @include adaptive("padding-bottom", 7, 3, 1);
-        @include adaptive("padding-left", 10, 5, 1);
-        @include adaptive("padding-right", 10, 5, 1);
-        @include adaptive("margin-top", 25, 15, 1);
-        @include adaptive("border-radius", 30, 10, 1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .check-box {
-        @include adaptive("width", 35, 15, 1);
-        @include adaptive("height", 35, 15, 1);
-        
-    }
-    &__point-info {
-        @include adaptive("width", 40, 20, 1);
-        @include adaptive("height", 40, 20, 1);
-    }
-    &__point-label {
-        @include adaptive("font-size", 24, 8, 1);
         font-family: "Sintony", sans-serif;
-        font-weight: bold;
-        line-height: 56px;
-    }
-    .point-info-img {
-        @include adaptive("width", 40, 20, 1);
-        @include adaptive("height", 40, 20, 1);
-    }
-    &__generate-btn {
-        @include adaptive("width", 755, 300, 1);
-        @include adaptive("height", 90, 40, 1);
-        @include adaptive("margin-top", 70, 50, 1);
-        @include adaptive("margin-bottom", 70, 50, 1);
-        @include adaptive("font-size", 26, 8, 1);
-        border-radius: 20px;
-        border: none;
-        font-family: "Source Sans Pro", sans-serif;
-        font-weight: bold;
-        letter-spacing: 4.2px;
-        text-transform: uppercase;
-        line-height: 24px;
+        color: #6d7783;
+        background-color: #d8d8d8;
     }
 }
 .footer {
@@ -600,6 +151,7 @@ body {
     &__text {
         @include adaptive("width", 308, 300, 1);
         @include adaptive("font-size", 18, 10, 1);
+        color: #17252a;
     }
     &__contacts {
         @include adaptive("margin-left", 35, 15, 1);
@@ -608,23 +160,347 @@ body {
         justify-content: flex-end;
         font-family: "Sintony", sans-serif;
         line-height: 27px;
+        color: #17252a;
     }
     &__email {
-        @include adaptive("margin-right", 93, 13, 1);
+        @include adaptive("margin-right", 100, 13, 1);
     }
 
     &__telephone {
-        @include adaptive("margin-right", 93, 13, 1);
+        @include adaptive("margin-right", 10, 3, 1);
     }
 }
-
-.hidden {
-    display: none;
+.popup-fade:before {
+    content: "";
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 2;
 }
-.is-open {
-    opacity: 70%;
-    visibility: visible;
-    transform: translateY(0);
+.popup-fade {
+    &__popup {
+        @include adaptive("padding", 50, 20, 1);
+        position: absolute;
+        top: 6%;
+        left: 24%;
+        right: 24%;
+        background: #c4c4c4;
+        border-radius: 10px;
+        z-index: 9;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &__popup-close {
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    &__inputs {
+        @include adaptive("font-size", 16, 8, 1);
+        font-family: "Source Sans Pro";
+        font-weight: 900;
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        @include adaptive("font-size", 24, 12, 1);
+        @include adaptive("margin-bottom", 8, 4, 1);
+    }
+    &__input:not(:first-child) {
+        @include adaptive("margin-top", 32, 8, 1);
+    }
+    .modal-input {
+        @include adaptive("padding", 7, 3, 1);
+        width: 90%;
+        border-radius: 5px;
+        border: none;
+    }
+    .modal-input:last-child {
+        padding-bottom: 5vh;
+    }
+    &__start {
+        @include adaptive("width", 150, 50, 1);
+        @include adaptive("height", 70, 20, 1);
+        @include adaptive("font-size", 24, 8, 1);
+        @include adaptive("margin-top", 32, 8, 1);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 4.2px;
+        border: none;
+        border-radius: 15px;
+        margin-left: auto;
+        background-color: #17252a;
+        color: #feffff;
+    }
+    &__ps {
+        @include adaptive("font-size", 12, 8, 1);
+        margin-bottom: auto;
+    }
+}
+#check-header {
+    padding-bottom: 3vh;
+}
+.check-main {
+    @include adaptive("margin-top", 20, 5, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__buttons {
+        @include adaptive("padding", 8, 3, 1);
+        width: 90%;
+        background-color: #2b7a78;
+        border-radius: 25px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__back-btn {
+        border: none;
+        background-color: transparent;
+    }
+    .btn-back-img {
+        @include adaptive("width", 60, 10, 1);
+        @include adaptive("height", 60, 10, 1);
+    }
+    #btn-new,
+    #btn-open,
+    #btn-save,
+    #btn-stat,
+    #btn-info {
+        border: none;
+        background-color: transparent;
+    }
+    &__btn {
+        @include adaptive("width", 140, 80, 1);
+        @include adaptive("height", 50, 10, 1);
+        @include adaptive("padding-right", 10, 3, 1);
+        @include adaptive("padding-left", 10, 3, 1);
+        @include adaptive("font-size", 12, 8, 1);
+        @include adaptive("line-height", 14, 4, 1);
+        font-family: "Source Sans Pro";
+        font-weight: bold;
+        letter-spacing: 3.2px;
+        color: #17252a;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .impo {
+        @include adaptive("font-size", 18, 9, 1);
+    }
+    .btn-img {
+        @include adaptive("width", 33, 13, 1);
+        @include adaptive("height", 33, 13, 1);
+    }
+    &__btn-generation {
+        @include adaptive("width", 160, 80, 1);
+        @include adaptive("height", 60, 10, 1);
+        @include adaptive("font-size", 13, 8, 1);
+        font-family: "Source Sans Pro";
+        font-weight: bold;
+        letter-spacing: 3.2px;
+        color: #17252a;
+        border: none;
+        background-color: #17252a;
+        color: #f2f2f2;
+        border-radius: 15px;
+    }
+    &__info {
+        @include adaptive("width", 110, 30, 1);
+        @include adaptive("height", 70, 12, 1);
+        @include adaptive("padding-top", 5, 2, 1);
+        @include adaptive("font-size", 14, 8, 1);
+        @include adaptive("line-height", 20, 8, 1);
+        font-weight: bold;
+        letter-spacing: 3.2px;
+        color: #17252a;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+    }
+    &__content {
+        font-family: "Source Sans Pro";
+        display: flex;
+        max-width: 90%;
+    }
+    &__check-lists {
+        @include adaptive("margin-top", 10, 5, 1);
+        @include adaptive("padding-top", 10, 5, 1);
+        border-radius: 20px;
+        background-color: #2b7a78;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15%;
+    }
+    &__check-list {
+        @include adaptive("height", 70, 10, 1);
+        @include adaptive("margin-bottom", 10, 3, 1);
+        @include adaptive("margin-top", 10, 3, 1);
+        @include adaptive("font-size", 13, 8, 1);
+        width: 80%;
+        text-transform: uppercase;
+        background-color: #feffff;
+        color: #17252a;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    &__named {
+        @include adaptive("margin", 10, 3, 1);
+        @include adaptive("padding", 12, 3, 1);
+        @include adaptive("margin-right", -10, -3, 1);
+        display: flex;
+        align-items: center;
+        background-color: #2b7a78;
+        border-radius: 10px;
+        position: relative;
+    }
+    &__name-check {
+        @include adaptive("padding", 5, 1, 1);
+        @include adaptive("padding-left", 15, 3, 1);
+        @include adaptive("font-size", 14, 8, 1);
+        font-weight: bold;
+        letter-spacing: 3.2px;
+        color: #6d7783;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+    }
+    #check-name {
+        width: 2vw;
+        height: 2vw;
+        position: absolute;
+        right: 1vw;
+    }
+    &__check {
+        @include adaptive("margin-left", 10, 3, 1);
+        @include adaptive("margin-right", -10, -3, 1);
+        @include adaptive("height", 600, 300, 1);
+        margin-top: 0px;
+        display: flex;
+    }
+    &__section {
+        @include adaptive("padding", 25, 1, 1);
+        background-color: #2b7a78;
+        border-radius: 10px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include adaptive("font-size", 24, 12, 1);
+        font-weight: bold;
+        line-height: 34px;
+        text-align: right;
+        letter-spacing: 4.2px;
+        text-decoration-line: underline;
+        color: #feffff;
+    }
+    &__per,
+    &__mist,
+    &__comm,
+    &__title-wgac {
+        @include adaptive("padding-top", 20, 10, 1);
+        @include adaptive("font-size", 18, 10, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        letter-spacing: 4.2px;
+        color: #feffff;
+    }
+    #per,
+    #mist,
+    #comm {
+        @include adaptive("font-size", 14, 10, 1);
+        @include adaptive("padding", 5, 1, 1);
+        width: 56%;
+        border-radius: 5px;
+        border: none;
+        background-color: #feffff;
+    }
+    #comm {
+        height: 20vh;
+    }
+    &__wgac {
+        @include adaptive("font-size", 14, 10, 1);
+        line-height: 34px;
+        text-align: right;
+        letter-spacing: 2.2px;
+        color: #feffff;
+    }
+
+    &__button {
+        @include adaptive("width", 150, 80, 1);
+        @include adaptive("height", 60, 20, 1);
+        @include adaptive("font-size", 20, 10, 1);
+        @include adaptive("margin-top", 30, 10, 1);
+        align-self: center;
+        font-weight: bold;
+        border: none;
+        background-color: #17252a;
+        color: #feffff;
+        border-radius: 10px;
+    }
+
+    &__crits {
+        @include adaptive("margin-left", 10, 3, 1);
+        @include adaptive("padding-left", 10, 3, 1);
+        background-color: #2b7a78;
+        border-radius: 10px;
+        width: 25%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    &__check-crit {
+        @include adaptive("height", 40, 5, 1);
+        @include adaptive("margin-bottom", 15, 3, 1);
+        @include adaptive("margin-top", 15, 3, 1);
+        @include adaptive("font-size", 13, 8, 1);
+        width: 90%;
+        background-color: #feffff;
+        color: #17252a;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+
+    &__info-page {
+        @include adaptive("margin-top", 10, 3, 1);
+        @include adaptive("margin-left", 20, 6, 1);
+        @include adaptive("padding", 20, 6, 1);
+        @include adaptive("font-size", 16, 10, 1);
+        color: #17252a;
+        background-color: #d8d8d8;
+        border-radius: 10px;
+        width: 15%;
+        overflow-y: auto;
+    }
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .link {
     text-decoration: none;
@@ -633,4 +509,28 @@ body {
 }
 button {
     cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.check-list-active {
+    background-color: #17252a;
+    outline: 5px solid #d8d8d8;
+    text-decoration-line: underline;
+    color: #d8d8d8;
+}
+.check-list-completed {
+    background-color: #17252a;
+    color: #d8d8d8;
+}
+
+.check-crit-active {
+    background-color: #17252a;
+    outline: 5px solid #d8d8d8;
+    text-decoration-line: underline;
+    color: #d8d8d8;
+}
+.check-crit-completed {
+    background-color: #17252a;
+    color: #d8d8d8;
 }
