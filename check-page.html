@@ -22,7 +22,7 @@
     <!-- main -->
     <main class="check-main">
         <div class="check-main__buttons">
-            <button class="check-main__back-btn"><img src="./img/Back.png" class="btn-back-img" alt="кнопка назад"></button>
+            <button class="check-main__back-btn" onclick="document.location='./index.html'"><img src="./img/Back.png" class="btn-back-img" alt="кнопка назад"></button>
             <button id="btn-new"><div class="check-main__btn"><img src="./img/Btn-new.png" class="btn-img" alt="начать проверку"><p>Начать проверку</p></div></button>
             <button id="btn-open"><div class="check-main__btn"><img src="./img/Btn-open.png" class="btn-img" alt="открыть проверку"><p>Открыть проверку</p></div></button>
             <button id="btn-save"><div class="check-main__btn"><img src="./img/Btn-save.png" class="btn-img" alt="сохранить проверку"><p>Сохранить проверку</p></div></button>
@@ -115,6 +115,87 @@
       </div>
     </footer>  
     <!-- /footer  -->
+        <!-- Модальное окно -->
+        <div class="check-popup-fade hidden">
+          <div class="check-popup-fade__popup">
+            <button class="check-popup-fade__popup-close"><svg width="35" height="35" viewBox="0 0 43 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1.93934" y1="41.9393" x2="41.9393" y2="1.93934" stroke="black" stroke-width="3"/>
+              <line x1="41.9393" y1="44.0607" x2="1.93934" y2="4.06066" stroke="black" stroke-width="3"/>
+              </svg>          
+              </button>
+              <div class="check-popup-fade__title">Выберите поля для отчёта</div>
+              <div class="check-popup-fade__content">
+                <div class="check-popup-fade__check-lists">
+                  <p class="check-popup-fade__check-lists-title">Чек-листы</p>
+                  <div class="check-popup-fade__check-container">
+                    <div class="cb-container"><input type="checkbox" id="cb-general" name="general">
+                      <label for="general">Общая доступность</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-basic" name="basic">
+                      <label for="basic">Доступность основного контента</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-media" name="media">
+                      <label for="media">Медиа</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-tests" name="tests">
+                      <label for="tests">Тесты</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-simul" name="simul">
+                      <label for="simul">Симуляции</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-mathn" name="mathn">
+                      <label for="mathn">Математическая нотация</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-progk" name="progk">
+                      <label for="progk">Программный код</label></div>
+                    </div>
+                </div>                
+                <div class="check-popup-fade__smist">
+                  <label for="sourmist">Источник ошибки</label>
+                  <input type="checkbox" id="cb-sourmist" name="sourmist">
+                </div>
+                <div class="check-popup-fade__perform">
+                  <p class="check-popup-fade__perform-title">Выполнение</p>
+                  <div class="check-popup-fade__check-container">
+                    <div class="cb-container"><input type="checkbox" id="cb-nperform" name="nperform">
+                      <label for="nperform">Невыполненные</label></div>
+                 <div class="cb-container"> <input type="checkbox" id="cb-perform" name="perform">
+                  <label for="perform">Выполненные</label></div>
+                  <div class="cb-container"><input type="checkbox" id="cb-applic" name="applic">
+                    <label for="applic">Не применимые</label></div>
+                  </div>
+                </div>
+                <div class="check-popup-fade__wgac">
+                  <p class="check-popup-fade__wgac-title">WGAC 2.1</p>
+                  <div class="check-popup-fade__check-container">
+                  <div class="cb-container"> <input type="checkbox" id="cb-crit" name="crit">
+                    <label for="crit">Критерий успеха</label></div>
+                  <div class="cb-container"><input type="checkbox" id="cb-confor" name="confor">
+                    <label for="confor">Уровень соответствия</label></div>
+                  <div class="cb-container"><input type="checkbox" id="cb-decod" name="decod">
+                    <label for="decod">Расшифровка критерия</label></div>
+                  </div>
+                </div>
+                <div class="check-popup-fade__comm">
+                  <label for="comm">Комментарии эксперта</label>
+                  <input type="checkbox" id="cb-comm" name="comm">
+                </div>
+                <div class="check-popup-fade__conclus">
+                  <label for="conclus">Итоговое заключение эксперта</label>
+                  <input type="checkbox" id="cb-conclus" name="conclus">
+                </div>
+              </div>
+              <div class="check-popup-fade__params">
+                <div class="check-popup-fade__param">  
+                  <p class="check-popup-fade__param-title">Параметры статистики</p>                
+                  <div class="param-container">
+                    <div class="cb-container"><input type="checkbox" id="cb-mid" name="mid">
+                      <label for="mid">Средние</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-graf" name="graf">
+                      <label for="graf">Графики</label></div>
+                    <div class="cb-container"><input type="checkbox" id="cb-dist" name="dist">
+                      <label for="dist">Распределения</label></div>
+                  </div>
+                </div>
+              </div>
+              <button class="check-popup-fade__ok">OK</button>        
+          </div>	
+        </div>   
+         <!--/Модальное окно -->
   </body>
   <script src= "js/script.js"></script>
 </html>

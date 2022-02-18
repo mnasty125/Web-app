@@ -135,6 +135,7 @@ body {
         @include adaptive("padding", 100, 50, 1);
         @include adaptive("margin-top", 35, 10, 1);
         @include adaptive("font-size", 18, 12, 1);
+        text-align: center;
         border-radius: 20px;
         font-family: "Sintony", sans-serif;
         color: #6d7783;
@@ -279,15 +280,15 @@ body {
         background-color: transparent;
     }
     &__btn {
-        @include adaptive("width", 140, 80, 1);
+        @include adaptive("width", 140, 40, 1);
         @include adaptive("height", 50, 10, 1);
-        @include adaptive("padding-right", 10, 3, 1);
-        @include adaptive("padding-left", 10, 3, 1);
-        @include adaptive("font-size", 12, 8, 1);
+        @include adaptive("padding-right", 10, 1, 1);
+        @include adaptive("padding-left", 10, 1, 1);
+        @include adaptive("font-size", 12, 6, 1);
         @include adaptive("line-height", 14, 4, 1);
         font-family: "Source Sans Pro";
         font-weight: bold;
-        letter-spacing: 3.2px;
+        letter-spacing: 2.6px;
         color: #17252a;
         background-color: #f2f2f2;
         border-radius: 15px;
@@ -296,19 +297,19 @@ body {
         justify-content: space-between;
     }
     .impo {
-        @include adaptive("font-size", 18, 9, 1);
+        @include adaptive("font-size", 18, 8, 1);
     }
     .btn-img {
         @include adaptive("width", 33, 13, 1);
         @include adaptive("height", 33, 13, 1);
     }
     &__btn-generation {
-        @include adaptive("width", 160, 80, 1);
+        @include adaptive("width", 160, 50, 1);
         @include adaptive("height", 60, 10, 1);
-        @include adaptive("font-size", 13, 8, 1);
+        @include adaptive("font-size", 13, 5, 1);
         font-family: "Source Sans Pro";
         font-weight: bold;
-        letter-spacing: 3.2px;
+        letter-spacing: 2.6px;
         color: #17252a;
         border: none;
         background-color: #17252a;
@@ -316,13 +317,12 @@ body {
         border-radius: 15px;
     }
     &__info {
-        @include adaptive("width", 110, 30, 1);
+        @include adaptive("width", 110, 20, 1);
         @include adaptive("height", 70, 12, 1);
         @include adaptive("padding-top", 5, 2, 1);
-        @include adaptive("font-size", 14, 8, 1);
-        @include adaptive("line-height", 20, 8, 1);
+        @include adaptive("font-size", 14, 6, 1);
         font-weight: bold;
-        letter-spacing: 3.2px;
+        letter-spacing: 2.6px;
         color: #17252a;
         background-color: #f2f2f2;
         border-radius: 15px;
@@ -343,10 +343,10 @@ body {
         width: 15%;
     }
     &__check-list {
-        @include adaptive("height", 70, 10, 1);
+        @include adaptive("height", 70, 20, 1);
         @include adaptive("margin-bottom", 10, 3, 1);
         @include adaptive("margin-top", 10, 3, 1);
-        @include adaptive("font-size", 13, 8, 1);
+        @include adaptive("font-size", 13, 2, 1);
         width: 80%;
         text-transform: uppercase;
         background-color: #feffff;
@@ -406,9 +406,9 @@ body {
     }
 
     &__title {
-        @include adaptive("font-size", 24, 12, 1);
+        @include adaptive("font-size", 24, 10, 1);
         font-weight: bold;
-        line-height: 34px;
+        line-height: 30px;
         text-align: right;
         letter-spacing: 4.2px;
         text-decoration-line: underline;
@@ -442,7 +442,7 @@ body {
     }
     &__wgac {
         @include adaptive("font-size", 14, 10, 1);
-        line-height: 34px;
+        line-height: 30px;
         text-align: right;
         letter-spacing: 2.2px;
         color: #feffff;
@@ -450,9 +450,9 @@ body {
 
     &__button {
         @include adaptive("width", 150, 80, 1);
-        @include adaptive("height", 60, 20, 1);
         @include adaptive("font-size", 20, 10, 1);
         @include adaptive("margin-top", 30, 10, 1);
+        @include adaptive("padding", 15, 10, 1);
         align-self: center;
         font-weight: bold;
         border: none;
@@ -496,6 +496,121 @@ body {
         border-radius: 10px;
         width: 15%;
         overflow-y: auto;
+    }
+}
+.check-popup-fade:before {
+    content: "";
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 2;
+}
+.check-popup-fade {
+    font-family: "Source Sans Pro";
+    font-weight: 900;
+    color: #17252a;
+    &__popup {
+        @include adaptive("padding", 50, 10, 1);
+        position: absolute;
+        top: 6%;
+        left: 22vw;
+        right: 22vw;
+        background: #c4c4c4;
+        border-radius: 10px;
+        z-index: 99;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &__popup-close {
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__title {
+        @include adaptive("font-size", 28, 14, 1);
+        text-align: center;
+    }
+
+    &__content {
+        @include adaptive("padding", 20, 5, 1);
+    }
+    input {
+        @include adaptive("width", 30, 10, 1);
+        @include adaptive("height", 30, 10, 1);
+        @include adaptive("margin-right", 10, 5, 1);
+    }
+    .cb-container {
+        @include adaptive("margin-bottom", 8, 4, 1);
+        display: flex;
+        align-items: center;
+    }
+    .param-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__check-lists,
+    &__smist,
+    &__perform,
+    &__wgac,
+    &__comm,
+    &__conclus {
+        @include adaptive("margin-top", 10, 5, 1);
+        @include adaptive("padding-top", 10, 5, 1);
+        display: flex;
+        align-items: start;
+        border-top: 1px solid #17252a;
+    }
+    &__smist,
+    &__comm,
+    &__conclus {
+        align-items: center;
+        justify-content: start;
+    }
+
+    #cb-sourmist,
+    #cb-comm,
+    #cb-conclus {
+        @include adaptive("margin-left", 20, 5, 1);
+    }
+
+    &__check-container {
+        @include adaptive("margin-top", 20, 5, 1);
+        @include adaptive("margin-left", 100, 40, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__param-title {
+        @include adaptive("margin-bottom", 20, 5, 1);
+        text-align: center;
+    }
+
+    &__param {
+        @include adaptive("margin-top", 20, 5, 1);
+        border-top: 2px solid #17252a;
+    }
+
+    &__ok {
+        @include adaptive("width", 150, 50, 1);
+        @include adaptive("height", 70, 20, 1);
+        @include adaptive("font-size", 24, 8, 1);
+        @include adaptive("margin-top", 32, 8, 1);
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 4.2px;
+        border: none;
+        border-radius: 15px;
+        margin-left: auto;
+        background-color: #17252a;
+        color: #feffff;
     }
 }
 p {
