@@ -14,9 +14,9 @@
     <!-- header -->
     <header class="header">
       <div class="header__logo"><a href="./index.html" class="link">Цифровая доступность</a></div>
-        <button class="header__accessibility">
+        <div class="header__accessibility">
           <img class="header__accessibility-img" src="./img/logo-ws.png" alt="логотип цифровой доступности"></img>
-        </button> 
+        </div> 
     </header>
     <!-- /header -->
     <!-- main -->
@@ -25,18 +25,9 @@
         электронных образовательных
         ресурсов</div>   
       <div class="main__cards">
-        <div class="main__card">
           <!-- При нажатии на кнопку открывается модалка с заполнением -->
           <button class="main__button-new">Начать проверку</button>   
-          <svg width="144" height="2" viewBox="0 0 144 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 1L144 1" stroke="#17252A" stroke-width="2"/>
-            </svg>            
-          <div class="main__card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, odit?</div>          
-        </div>
-        <divЮ class="main__card">
           <button class="main__button-cont" onclick="document.location='./check-page.html'">Продолжить проверку</button>
-          <div class="main__card-name">Название чек-листа</div>          
-      </div>
     </main>  
     <!-- /main -->
     <!-- footer -->
@@ -57,22 +48,22 @@
     <!-- Модальное окно -->
     <div class="popup-fade hidden">
       <div class="popup-fade__popup">
-        <button class="popup-fade__popup-close"><svg width="35" height="35" viewBox="0 0 43 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="1.93934" y1="41.9393" x2="41.9393" y2="1.93934" stroke="black" stroke-width="3"/>
-          <line x1="41.9393" y1="44.0607" x2="1.93934" y2="4.06066" stroke="black" stroke-width="3"/>
-          </svg>          
+        <button class="popup-fade__popup-close"><svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.89014 23.991L21.8901 1.991M21.8901 24.009L1.89014 2.00902" stroke="black" stroke-width="3"/>
+          </svg>
+                   
           </button>
           <div class="popup-fade__inputs">
             <label for="name" class="popup-fade__input">Название ресурса *</label>
-            <input type="text" id="name" class="modal-input" placeholder="Короткое название  (до 100 символов)">
+            <input type="text" id="name" class="modal-input" placeholder="Короткое название  (до 100 символов)" maxlength="100">
             <label for="url" class="popup-fade__input">URL ресурса</label>
             <input type="url" id="url" class="modal-input" placeholder="http://">
             <label for="plt" class="popup-fade__input">Платформа</label>
-            <input type="text" id="plt" class="modal-input" placeholder="Наименование (до 50 символов)">
+            <input type="text" id="plt" class="modal-input" placeholder="Наименование (до 50 символов)" maxlength="50">
             <label for="auth" class="popup-fade__input">Автор</label>
             <input type="text" id="auth" class="modal-input" placeholder="Фамилия И.О.">
             <label for="char" class="popup-fade__input">Краткая характеристика ресурса</label>
-            <textarea type="text" id="char" class="modal-input" placeholder="Описание ресурса. Дополнительная информация (до 200 символов)"></textarea>
+            <textarea type="text" id="char" class="modal-input" placeholder="Описание ресурса. Дополнительная информация (до 200 символов)" maxlength="200"></textarea>
           </div>
           <button class="popup-fade__start">Начать</button>
           <p class="popup-fade__ps">*  -  Обязательное поле </p>          

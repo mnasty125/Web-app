@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Righteous&family=Sintony:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap");
-@import url("./light-mode.scss");
+
 // Миксин для адаптива
 $maxWidth: 1920;
 $maxWidthContainer: 1170;
@@ -91,13 +91,13 @@ body {
         @include adaptive("font-size", 20, 11, 1);
         line-height: 24px;
         text-align: center;
-        letter-spacing: 4.2px;
+        letter-spacing: 2px;
         text-transform: uppercase;
         background-color: #17252a;
         color: #feffff;
     }
     &__button-new {
-        @include adaptive("margin-bottom", 70, 20, 1);
+        @include adaptive("margin-right", 136, 36, 0);
     }
     &__cards {
         @include adaptive("margin-top", 80, 20, 1);
@@ -107,56 +107,23 @@ body {
         display: flex;
         justify-content: space-between;
     }
-    &__card:not(:last-child) {
-        @include adaptive("margin-right", 50, 10, 1);
-    }
-    &__card {
-        @include adaptive("width", 400, 55, 1);
-        @include adaptive("height", 390, 190, 1);
-        @include adaptive("padding", 50, 15, 0);
-        border-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #feffff;
-        box-shadow: (4px 4px 12px rgba(0, 0, 0, 0.5));
-    }
-    &__card-text {
-        @include adaptive("font-size", 18, 12, 1);
-        @include adaptive("padding-top", 47, 20, 1);
-        @include adaptive("padding-bottom", 27, 9, 1);
-        @include adaptive("padding-right", 30, 10, 1);
-        @include adaptive("padding-left", 30, 10, 1);
-        text-align: center;
-        font-family: "Sintony", sans-serif;
-        color: #17252a;
-    }
-    &__card-name {
-        @include adaptive("padding", 100, 50, 1);
-        @include adaptive("margin-top", 35, 10, 1);
-        @include adaptive("font-size", 18, 12, 1);
-        text-align: center;
-        border-radius: 20px;
-        font-family: "Sintony", sans-serif;
-        color: #6d7783;
-        background-color: #d8d8d8;
-    }
 }
 .footer {
     @include adaptive("width", 1114, 280, 1);
-    @include adaptive("height", 329, 100, 1);
+    @include adaptive("height", 269, 80, 1);
+    padding-bottom: 30px;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
     margin: auto;
     &__text {
         @include adaptive("width", 308, 300, 1);
-        @include adaptive("font-size", 18, 10, 1);
+        @include adaptive("font-size", 16, 6, 1);
         color: #17252a;
     }
     &__contacts {
         @include adaptive("margin-left", 35, 15, 1);
-        @include adaptive("font-size", 18, 8, 1);
+        @include adaptive("font-size", 16, 6, 1);
         display: flex;
         justify-content: flex-end;
         font-family: "Sintony", sans-serif;
@@ -204,18 +171,18 @@ body {
         right: 10px;
     }
     &__inputs {
-        @include adaptive("font-size", 16, 8, 1);
+        @include adaptive("font-size", 14, 8, 1);
         font-family: "Source Sans Pro";
         font-weight: 900;
         display: flex;
         flex-direction: column;
     }
     &__input {
-        @include adaptive("font-size", 24, 12, 1);
-        @include adaptive("margin-bottom", 8, 4, 1);
+        @include adaptive("font-size", 18, 6, 1);
+        @include adaptive("margin-bottom", 4, 2, 1);
     }
     &__input:not(:first-child) {
-        @include adaptive("margin-top", 32, 8, 1);
+        @include adaptive("margin-top", 16, 8, 1);
     }
     .modal-input {
         @include adaptive("padding", 7, 3, 1);
@@ -228,12 +195,12 @@ body {
     }
     &__start {
         @include adaptive("width", 150, 50, 1);
-        @include adaptive("height", 70, 20, 1);
-        @include adaptive("font-size", 24, 8, 1);
-        @include adaptive("margin-top", 32, 8, 1);
+        @include adaptive("height", 50, 20, 1);
+        @include adaptive("font-size", 18, 8, 1);
+        @include adaptive("margin-top", 16, 8, 1);
         text-transform: uppercase;
         font-weight: 900;
-        letter-spacing: 4.2px;
+        letter-spacing: 2px;
         border: none;
         border-radius: 15px;
         margin-left: auto;
@@ -241,12 +208,9 @@ body {
         color: #feffff;
     }
     &__ps {
-        @include adaptive("font-size", 12, 8, 1);
+        @include adaptive("font-size", 12, 4, 1);
         margin-bottom: auto;
     }
-}
-#check-header {
-    padding-bottom: 3vh;
 }
 .check-main {
     @include adaptive("margin-top", 20, 5, 1);
@@ -256,12 +220,14 @@ body {
     &__buttons {
         @include adaptive("padding", 8, 3, 1);
         width: 90%;
-        background-color: #2b7a78;
-        border-radius: 25px;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    &__div {
+        display: flex;
+        align-items: center;
     }
     &__back-btn {
         border: none;
@@ -273,9 +239,7 @@ body {
     }
     #btn-new,
     #btn-open,
-    #btn-save,
-    #btn-stat,
-    #btn-info {
+    #btn-save {
         border: none;
         background-color: transparent;
     }
@@ -284,48 +248,36 @@ body {
         @include adaptive("height", 50, 10, 1);
         @include adaptive("padding-right", 10, 1, 1);
         @include adaptive("padding-left", 10, 1, 1);
-        @include adaptive("font-size", 12, 6, 1);
+        @include adaptive("font-size", 16, 4, 1);
         @include adaptive("line-height", 14, 4, 1);
         font-family: "Source Sans Pro";
         font-weight: bold;
-        letter-spacing: 2.6px;
-        color: #17252a;
-        background-color: #f2f2f2;
-        border-radius: 15px;
+        letter-spacing: 1px;
+        color: #2b7a78;
+        border: 2px solid #2b7a78;
+        border-radius: 10px;
+        text-align: left;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .impo {
-        @include adaptive("font-size", 18, 8, 1);
-    }
     .btn-img {
         @include adaptive("width", 33, 13, 1);
         @include adaptive("height", 33, 13, 1);
+        @include adaptive("padding-right", 10, 1, 0);
     }
     &__btn-generation {
-        @include adaptive("width", 160, 50, 1);
+        @include adaptive("width", 200, 80, 1);
         @include adaptive("height", 60, 10, 1);
-        @include adaptive("font-size", 13, 5, 1);
+        @include adaptive("font-size", 18, 4, 1);
         font-family: "Source Sans Pro";
         font-weight: bold;
-        letter-spacing: 2.6px;
+        letter-spacing: 1px;
         color: #17252a;
         border: none;
         background-color: #17252a;
         color: #f2f2f2;
-        border-radius: 15px;
-    }
-    &__info {
-        @include adaptive("width", 110, 20, 1);
-        @include adaptive("height", 70, 12, 1);
-        @include adaptive("padding-top", 5, 2, 1);
-        @include adaptive("font-size", 14, 6, 1);
-        font-weight: bold;
-        letter-spacing: 2.6px;
-        color: #17252a;
-        background-color: #f2f2f2;
-        border-radius: 15px;
+        border-radius: 10px;
     }
     &__content {
         font-family: "Source Sans Pro";
@@ -334,28 +286,33 @@ body {
     }
     &__check-lists {
         @include adaptive("margin-top", 10, 5, 1);
-        @include adaptive("padding-top", 10, 5, 1);
-        border-radius: 20px;
-        background-color: #2b7a78;
+        border-right: 3px solid #2b7a78;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 15%;
+        width: 13%;
     }
     &__check-list {
-        @include adaptive("height", 70, 20, 1);
+        @include adaptive("height", 90, 20, 1);
+        @include adaptive("width", 120, 20, 1);
         @include adaptive("margin-bottom", 10, 3, 1);
-        @include adaptive("margin-top", 10, 3, 1);
-        @include adaptive("font-size", 13, 2, 1);
-        width: 80%;
-        text-transform: uppercase;
-        background-color: #feffff;
+        @include adaptive("font-size", 14, 4, 0);
+        font-weight: bold;
         color: #17252a;
-        border-radius: 5px;
+        text-transform: uppercase;
+        border: 1px solid #2b7a78;
+        background-color: #feffff;
+        border-radius: 3px;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+    }
+    &__check-list-svg {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
     &__container {
         display: flex;
@@ -368,16 +325,16 @@ body {
         @include adaptive("margin-right", -10, -3, 1);
         display: flex;
         align-items: center;
-        background-color: #2b7a78;
-        border-radius: 10px;
+        border: 3px solid #2b7a78;
+        border-radius: 5px;
         position: relative;
     }
     &__name-check {
         @include adaptive("padding", 5, 1, 1);
         @include adaptive("padding-left", 15, 3, 1);
         @include adaptive("font-size", 14, 8, 1);
-        font-weight: bold;
-        letter-spacing: 3.2px;
+        font-weight: normal;
+        letter-spacing: 2px;
         color: #6d7783;
         width: 100%;
         border: none;
@@ -398,75 +355,65 @@ body {
     }
     &__section {
         @include adaptive("padding", 25, 1, 1);
-        background-color: #2b7a78;
-        border-radius: 10px;
+        border-radius: 5px;
+        border: 3px solid #2b7a78;
         overflow: auto;
         display: flex;
         flex-direction: column;
     }
 
     &__title {
-        @include adaptive("font-size", 24, 10, 1);
+        @include adaptive("font-size", 20, 6, 1);
         font-weight: bold;
-        line-height: 30px;
+        line-height: 18px;
         text-align: right;
-        letter-spacing: 4.2px;
+        letter-spacing: 2px;
         text-decoration-line: underline;
-        color: #feffff;
+        color: #17252a;
     }
     &__per,
     &__mist,
     &__comm,
     &__title-wgac {
         @include adaptive("padding-top", 20, 10, 1);
-        @include adaptive("font-size", 18, 10, 1);
+        @include adaptive("font-size", 16, 6, 1);
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: bold;
-        letter-spacing: 4.2px;
-        color: #feffff;
+        letter-spacing: 2px;
+        color: #17252a;
     }
     #per,
     #mist,
     #comm {
-        @include adaptive("font-size", 14, 10, 1);
+        @include adaptive("font-size", 14, 6, 1);
         @include adaptive("padding", 5, 1, 1);
         width: 56%;
         border-radius: 5px;
-        border: none;
+        border: 1px solid #17252a;
         background-color: #feffff;
     }
     #comm {
         height: 20vh;
     }
     &__wgac {
-        @include adaptive("font-size", 14, 10, 1);
-        line-height: 30px;
+        @include adaptive("font-size", 14, 6, 1);
+        line-height: 16px;
         text-align: right;
         letter-spacing: 2.2px;
-        color: #feffff;
+        color: #17252a;
     }
-
-    &__button {
-        @include adaptive("width", 150, 80, 1);
-        @include adaptive("font-size", 20, 10, 1);
-        @include adaptive("margin-top", 30, 10, 1);
-        @include adaptive("padding", 15, 10, 1);
-        align-self: center;
-        font-weight: bold;
-        border: none;
-        background-color: #17252a;
-        color: #feffff;
-        border-radius: 10px;
+    &__title-wgac {
+        margin-bottom: 20px;
     }
-
     &__crits {
         @include adaptive("margin-left", 10, 3, 1);
-        @include adaptive("padding-left", 10, 3, 1);
-        background-color: #2b7a78;
-        border-radius: 10px;
-        width: 25%;
+        @include adaptive("padding-left", 8, 2, 0);
+        border-left: 3px solid #2b7a78;
+        border-bottom: 3px solid #2b7a78;
+        border-bottom-left-radius: 5px;
+        width: 20%;
         overflow-y: scroll;
         overflow-x: hidden;
     }
@@ -474,28 +421,23 @@ body {
     &__check-crit {
         @include adaptive("height", 40, 5, 1);
         @include adaptive("margin-bottom", 15, 3, 1);
-        @include adaptive("margin-top", 15, 3, 1);
-        @include adaptive("font-size", 13, 8, 1);
-        width: 90%;
+        @include adaptive("padding-right", 15, 3, 1);
+        @include adaptive("font-size", 13, 4, 1);
+        width: 78%;
+        font-weight: bold;
+        border: 1px solid #2b7a78;
         background-color: #feffff;
         color: #17252a;
-        text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         border-radius: 3px;
+        position: relative;
     }
-
-    &__info-page {
-        @include adaptive("margin-top", 10, 3, 1);
-        @include adaptive("margin-left", 20, 6, 1);
-        @include adaptive("padding", 20, 6, 1);
-        @include adaptive("font-size", 16, 10, 1);
-        color: #17252a;
-        background-color: #d8d8d8;
-        border-radius: 10px;
-        width: 15%;
-        overflow-y: auto;
+    &__check-crit-svg {
+        @include adaptive("margin-right", 10, 3, 1);
+        position: absolute;
+        left: 0;
     }
 }
 .check-popup-fade:before {
@@ -510,6 +452,7 @@ body {
     z-index: 2;
 }
 .check-popup-fade {
+    @include adaptive("font-size", 14, 6, 1);
     font-family: "Source Sans Pro";
     font-weight: 900;
     color: #17252a;
@@ -535,7 +478,7 @@ body {
     }
 
     &__title {
-        @include adaptive("font-size", 28, 14, 1);
+        @include adaptive("font-size", 20, 8, 1);
         text-align: center;
     }
 
@@ -543,12 +486,11 @@ body {
         @include adaptive("padding", 20, 5, 1);
     }
     input {
-        @include adaptive("width", 30, 10, 1);
-        @include adaptive("height", 30, 10, 1);
+        @include adaptive("width", 20, 10, 1);
+        @include adaptive("height", 20, 10, 1);
         @include adaptive("margin-right", 10, 5, 1);
     }
     .cb-container {
-        @include adaptive("margin-bottom", 8, 4, 1);
         display: flex;
         align-items: center;
     }
@@ -582,7 +524,6 @@ body {
     }
 
     &__check-container {
-        @include adaptive("margin-top", 20, 5, 1);
         @include adaptive("margin-left", 100, 40, 1);
         display: flex;
         flex-direction: column;
@@ -599,15 +540,14 @@ body {
     }
 
     &__ok {
-        @include adaptive("width", 150, 50, 1);
-        @include adaptive("height", 70, 20, 1);
-        @include adaptive("font-size", 24, 8, 1);
-        @include adaptive("margin-top", 32, 8, 1);
+        @include adaptive("width", 100, 40, 1);
+        @include adaptive("height", 50, 10, 1);
+        @include adaptive("font-size", 16, 8, 1);
         text-transform: uppercase;
         font-weight: 900;
-        letter-spacing: 4.2px;
+        letter-spacing: 1px;
         border: none;
-        border-radius: 15px;
+        border-radius: 10px;
         margin-left: auto;
         background-color: #17252a;
         color: #feffff;
@@ -629,23 +569,13 @@ button {
     display: none;
 }
 .check-list-active {
-    background-color: #17252a;
-    outline: 5px solid #d8d8d8;
+    background-color: #2b7a78;
     text-decoration-line: underline;
-    color: #d8d8d8;
-}
-.check-list-completed {
-    background-color: #17252a;
-    color: #d8d8d8;
+    color: #feffff;
 }
 
 .check-crit-active {
-    background-color: #17252a;
-    outline: 5px solid #d8d8d8;
+    background-color: #2b7a78;
     text-decoration-line: underline;
-    color: #d8d8d8;
-}
-.check-crit-completed {
-    background-color: #17252a;
     color: #d8d8d8;
 }
