@@ -185,8 +185,7 @@ body {
 
 .footer {
   width: 1114px;
-  padding-top: calc(30px + 150 * ((100vw - 320px) / 1600));
-  padding-top: 15%;
+  padding-top: 55vh;
   padding-bottom: 5%;
   display: flex;
   align-items: end;
