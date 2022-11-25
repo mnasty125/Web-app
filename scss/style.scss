@@ -218,7 +218,7 @@ body {
     align-items: center;
     &__buttons {
         @include adaptive("padding", 8, 3, 1);
-        width: 84%;
+        width: 90%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -281,10 +281,12 @@ body {
     &__content {
         font-family: "Source Sans Pro";
         display: flex;
-        max-width: 90%;
+        width: 89%;
     }
     &__check-lists {
         @include adaptive("margin-top", 10, 5, 1);
+        @include adaptive("padding-top", 5, 2, 1);
+        @include adaptive("padding-right", 10, 4, 1);
         border-right: 3px solid #2b7a78;
         display: flex;
         flex-direction: column;
@@ -316,7 +318,7 @@ body {
     &__container {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 96%;
     }
     &__named {
         @include adaptive("margin", 10, 3, 1);
@@ -337,7 +339,7 @@ body {
         color: #6d7783;
         width: 100%;
         border: none;
-        border-radius: 5px;
+        border-radius: 2px;
     }
     #check-name {
         width: 2vw;
@@ -353,7 +355,7 @@ body {
         display: flex;
     }
     &__section {
-        @include adaptive("padding", 25, 1, 1);
+        @include adaptive("padding", 15, 1, 1);
         border-radius: 5px;
         border: 3px solid #2b7a78;
         overflow: auto;
@@ -364,7 +366,8 @@ body {
     &__title {
         @include adaptive("font-size", 20, 8, 1);
         font-weight: bold;
-        line-height: 14px;
+        margin-top: -3vh;
+        line-height: 18px;
         text-align: right;
         letter-spacing: 2px;
         text-decoration-line: underline;
@@ -398,7 +401,7 @@ body {
     }
     &__wgac {
         @include adaptive("font-size", 14, 6, 1);
-        line-height: 8px;
+        line-height: 18px;
         text-align: right;
         letter-spacing: 1px;
         color: #17252a;
