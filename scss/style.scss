@@ -89,7 +89,7 @@ body {
         border: none;
         font-weight: bold;
         @include adaptive("font-size", 20, 11, 1);
-        line-height: 24px;
+        line-height: 16px;
         text-align: center;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -110,8 +110,9 @@ body {
 }
 .footer {
     @include adaptive("width", 1114, 280, 1);
-    @include adaptive("height", 269, 80, 1);
-    padding-bottom: 30px;
+    @include adaptive("padding-top", 180, 30, 0);
+    padding-top: 15%;
+    padding-bottom: 5%;
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -127,7 +128,6 @@ body {
         display: flex;
         justify-content: flex-end;
         font-family: "Sintony", sans-serif;
-        line-height: 27px;
         color: #17252a;
     }
     &__email {
@@ -154,20 +154,20 @@ body {
         @include adaptive("padding", 50, 20, 1);
         position: absolute;
         top: 6%;
-        left: 24%;
-        right: 24%;
+        left: 20%;
+        right: 20%;
         background: #c4c4c4;
-        border-radius: 10px;
+        border-radius: 5px;
         z-index: 9;
         opacity: 1;
         display: flex;
         flex-direction: column;
     }
     &__popup-close {
+        @include adaptive("top", 10, 2, 1);
         background: transparent;
         border: none;
         position: absolute;
-        top: 10px;
         right: 10px;
     }
     &__inputs {
@@ -178,8 +178,8 @@ body {
         flex-direction: column;
     }
     &__input {
-        @include adaptive("font-size", 18, 6, 1);
-        @include adaptive("margin-bottom", 4, 2, 1);
+        @include adaptive("font-size", 18, 8, 1);
+        @include adaptive("margin-bottom", 4, 6, 1);
     }
     &__input:not(:first-child) {
         @include adaptive("margin-top", 16, 8, 1);
@@ -200,15 +200,15 @@ body {
         @include adaptive("margin-top", 16, 8, 1);
         text-transform: uppercase;
         font-weight: 900;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         border: none;
-        border-radius: 15px;
+        border-radius: 10px;
         margin-left: auto;
         background-color: #17252a;
         color: #feffff;
     }
     &__ps {
-        @include adaptive("font-size", 12, 4, 1);
+        @include adaptive("font-size", 12, 6, 1);
         margin-bottom: auto;
     }
 }
@@ -219,7 +219,7 @@ body {
     align-items: center;
     &__buttons {
         @include adaptive("padding", 8, 3, 1);
-        width: 90%;
+        width: 84%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -244,8 +244,8 @@ body {
         background-color: transparent;
     }
     &__btn {
-        @include adaptive("width", 140, 40, 1);
-        @include adaptive("height", 50, 10, 1);
+        @include adaptive("width", 140, 50, 1);
+        @include adaptive("height", 50, 20, 1);
         @include adaptive("padding-right", 10, 1, 1);
         @include adaptive("padding-left", 10, 1, 1);
         @include adaptive("font-size", 16, 4, 1);
@@ -268,8 +268,8 @@ body {
     }
     &__btn-generation {
         @include adaptive("width", 200, 80, 1);
-        @include adaptive("height", 60, 10, 1);
-        @include adaptive("font-size", 18, 4, 1);
+        @include adaptive("height", 60, 20, 1);
+        @include adaptive("font-size", 18, 6, 1);
         font-family: "Source Sans Pro";
         font-weight: bold;
         letter-spacing: 1px;
@@ -289,13 +289,13 @@ body {
         border-right: 3px solid #2b7a78;
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 13%;
     }
     &__check-list {
-        @include adaptive("height", 90, 20, 1);
-        @include adaptive("width", 120, 20, 1);
+        @include adaptive("height", 90, 30, 1);
+        @include adaptive("width", 116, 29, 1);
         @include adaptive("margin-bottom", 10, 3, 1);
+        @include adaptive("padding", 4, 1, 1);
         @include adaptive("font-size", 14, 4, 0);
         font-weight: bold;
         color: #17252a;
@@ -363,9 +363,9 @@ body {
     }
 
     &__title {
-        @include adaptive("font-size", 20, 6, 1);
+        @include adaptive("font-size", 20, 8, 1);
         font-weight: bold;
-        line-height: 18px;
+        line-height: 14px;
         text-align: right;
         letter-spacing: 2px;
         text-decoration-line: underline;
@@ -375,13 +375,13 @@ body {
     &__mist,
     &__comm,
     &__title-wgac {
-        @include adaptive("padding-top", 20, 10, 1);
+        @include adaptive("padding-top", 20, 5, 1);
         @include adaptive("font-size", 16, 6, 1);
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: #17252a;
     }
     #per,
@@ -395,17 +395,17 @@ body {
         background-color: #feffff;
     }
     #comm {
-        height: 20vh;
+        height: 20vw;
     }
     &__wgac {
         @include adaptive("font-size", 14, 6, 1);
-        line-height: 16px;
+        line-height: 8px;
         text-align: right;
-        letter-spacing: 2.2px;
+        letter-spacing: 1px;
         color: #17252a;
     }
     &__title-wgac {
-        margin-bottom: 20px;
+        @include adaptive("margin-bottom", 20, 6, 1);
     }
     &__crits {
         @include adaptive("margin-left", 10, 3, 1);
@@ -460,8 +460,8 @@ body {
         @include adaptive("padding", 50, 10, 1);
         position: absolute;
         top: 6%;
-        left: 22vw;
-        right: 22vw;
+        left: 18vw;
+        right: 18vw;
         background: #c4c4c4;
         border-radius: 10px;
         z-index: 99;
@@ -541,7 +541,7 @@ body {
 
     &__ok {
         @include adaptive("width", 100, 40, 1);
-        @include adaptive("height", 50, 10, 1);
+        @include adaptive("height", 50, 20, 1);
         @include adaptive("font-size", 16, 8, 1);
         text-transform: uppercase;
         font-weight: 900;
